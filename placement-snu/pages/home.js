@@ -1,10 +1,10 @@
 import Home from '../components/Home';
-import { useSession, signIn, signOut, getSession } from "next-auth/react"
+import { signOut, getSession } from "next-auth/react"
 
 export default function home(props){
-    return(
+    return( 
         <>
-          <Home />
+          <Home user={props.user}/>
           <p>{props.message}</p>
           <button onClick={() => signOut()}>Sign out</button>
         </>
@@ -14,13 +14,15 @@ export default function home(props){
 export async function getServerSideProps(context){
     const {req, res} = context;
     const session = await getSession({req});
+    
 
     if (session) { 
+      const user = JSON.stringify(session.user)
       return {
         props: {
           canRender: true,
-          session: session,
-          message: 'You have logged in to secure content'
+          user: user,
+          message: 'You have logged in to secure content',
         },
       };
     }
@@ -31,6 +33,7 @@ export async function getServerSideProps(context){
     return {
       props: {
         canRender: false,
+        session:[],
         message: 'please sign in to view secure content'
       },
     };
