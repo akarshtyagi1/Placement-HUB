@@ -1,12 +1,13 @@
 import { signIn, getSession, getProviders} from "next-auth/react"
 import {db} from "../utils/firebase";
+import Navbar from "../components/common/Navbar";
+import Header from "../components/common/Header";
 import {addDoc, collection, getDocs, query, where} from "firebase/firestore";
-// import { compileStringAsync } from "sass";
+import Login from "../components/Login";
 
 export default function Component({providers}) {
   var googleId;
    
-
   Object.values(providers).map((provider) => {
     if(provider.name === "Google"){
       googleId = provider.id;
@@ -14,8 +15,8 @@ export default function Component({providers}) {
   })
 
   return <>
-    Not signed in -
-    <button onClick={ () => signIn(googleId) }>Sign in</button>
+    <Header title={"LOGIN: placements-snu"}/>
+    <Login providerId={googleId} />
   </>
 }
 
@@ -23,16 +24,7 @@ export async function getServerSideProps(context){
   const {req, res} = context;
   const session = await getSession({req});
   const providers = await getProviders();
-
   const userCollectionRef = collection(db, "users");
-
-  // const q = query(userCollectionRef, where('email', '==', 'at269@snu.edu.in'))
-  // const user = await getDocs(q);
-  // if(user.size == 0){
-  //   console.log(false)
-  // }else{
-  //   console.log(user.docs[0].data().email);
-  // }
 
   if(session){
     const userEmail = session.user.email;

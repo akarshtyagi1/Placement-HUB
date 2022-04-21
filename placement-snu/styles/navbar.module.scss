@@ -1,0 +1,27 @@
+$header-background : #175699;
+// $border: 1px solid black;
+
+.header{
+    background-color: $header-background;
+    // border: 1px solid black;    
+    padding: 10px 8vw;
+    height: 40px;
+    display: flex;
+    box-shadow: 0 5px 10px gray;
+
+    & div{
+        width: 70vw;
+
+        & p{
+            text-align: center;
+            font-size: 2em;
+            margin: 0;
+            font-family: 'Graduate';
+            color: white;
+            letter-spacing: 0px;
+            font-weight: 600;
+            line-height: 30px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    }
+}

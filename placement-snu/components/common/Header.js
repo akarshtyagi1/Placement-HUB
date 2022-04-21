@@ -1,9 +1,9 @@
-export default function Header(){
+import Head from "next/head"
+
+export default function Header(props){
     return(
-        <>
-            <div className="header">
-                
-            </div>
-        </>
+        <Head>
+            <title>{props.title}</title>
+        </Head>
     );
 }
