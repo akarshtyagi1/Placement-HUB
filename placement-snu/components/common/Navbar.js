@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Navbar() {
   return (
     <>
-      <div className={styles.header}>
+      <div className={styles.navbar}>
         <Image src={Logo} width="175px" />
         <div>
           <p>PLACEMENTS-SNU</p>
