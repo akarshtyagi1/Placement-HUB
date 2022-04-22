@@ -11,4 +11,4 @@ export default function Login({ providerId }) {
       </div>
     </div>
   );
-}clear
+}
