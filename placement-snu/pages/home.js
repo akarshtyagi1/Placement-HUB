@@ -6,9 +6,7 @@ export default function home(props){
     return( 
         <>
           <Header title={"Home"}/>
-          <Home user={props.user}/>
-          <p>{props.message}</p>
-          <button onClick={() => signOut()}>Sign out</button>
+          <Home />
         </>
     ); 
 }

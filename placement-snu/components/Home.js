@@ -1,12 +1,45 @@
+import styles from "../styles/home.module.scss";
+
+const CompanyCard = (props) => {
+  return (
+    <div className={styles.companyCard}>
+      <p className={styles.companyName}>{props.name}</p>
+      <p className={styles.qCount}>{props.count}</p>
+    </div>
+  );
+};
+
+const companies = [
+  "Amazon",
+  "American Express",
+  "Google",
+  "Google",
+  "Google",
+  "Google",
+  "Google",
+  "Google",
+  "Google",
+  "Google",
+  "Google",
+  "Google",
+  "Google",
+  "Google",
+];
+
 export default function Home(props) {
-  const user = JSON.parse(props.user);
-  console.log(user);
   return (
     <>
-      <h1>Home Page</h1>
-      <h2>{user.name}</h2>
-      <p>{user.email}</p>
-      <img src={user.image} width="100" height="100" />
+      <div className={styles.body}>
+        <div className={styles.left}>
+          <div className={styles.companyCol}>
+            {companies.map((company) => {
+              return <CompanyCard key={company} name={company} count="2" />;
+            })}
+          </div>
+        </div>
+        <div className={styles.mid}>Mid</div>
+        <div className={styles.right}>right</div>
+      </div>
     </>
   );
 }
