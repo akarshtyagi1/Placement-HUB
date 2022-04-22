@@ -37,36 +37,22 @@
 
     & .right{
         border: 1px solid black;
-        flex-grow: 3;
-    }
-}
+        flex-grow: 2;
+        padding: 20px;
+        box-sizing: border-box;
+        max-width: 25%;
 
-.companyCard{
-    border: 1px solid black;
-    box-sizing: border-box;
-    border-radius: 20px;
-    display: flex;
-    margin: 10px 0;
-    padding: 5px ;
+        & .experienceCol{
+            border: 1px solid black;
+            height: 100%;
+            box-sizing: border-box;
+            overflow-y: scroll;
+            -ms-overflow-style: none; 
+            scrollbar-width: none; 
 
-    & p{
-        padding: 1px;
-        border-radius: 20px;
-        font-size: 1.2em;
-        margin: 0;
-    }
-    
-    & p.companyName{
-        border: 1px solid black;
-        flex-grow: 8;
-    } 
-    & p.qCount{
-        height: 1.2em;
-        width: 1.2em;
-        // border: 1px solid black;
-        text-align: center;
-        border-radius: 100%;
-        background-color: gray;
-        color: white;
+            &::-webkit-scrollbar {
+                display: none;
+            } 
+        }
     }
 }
