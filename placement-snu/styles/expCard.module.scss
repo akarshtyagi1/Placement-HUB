@@ -1,0 +1,22 @@
+.experience{
+    width: 25em;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    height: 15em;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: white;
+    
+    & h2, p{
+        margin: 10px;
+    }
+
+    & > p{
+        font-size: 1.2em;
+        overflow: hidden;
+        text-align: justify;
+        line-height:18px;
+        max-height: 72px;
+    }
+}

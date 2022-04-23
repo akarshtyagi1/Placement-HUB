@@ -1,20 +1,20 @@
 .companyCard{
-    border: 1px solid black;
     box-sizing: border-box;
     border-radius: 20px;
     display: flex;
     margin: 10px 0;
-    padding: 5px ;
+    padding: 5px;
+    background-color:white;
+
 
     & p{
         padding: 1px;
         border-radius: 20px;
-        font-size: 1.2em;
+        font-size: 20px;
         margin: 0;
     }
     
     & p.companyName{
-        border: 1px solid black;
         flex-grow: 8;
     } 
     & p.qCount{

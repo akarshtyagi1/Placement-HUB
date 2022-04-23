@@ -20,9 +20,7 @@ export async function getServerSideProps(context){
        const user = JSON.stringify(session.user)
       return {
         props: {
-          canRender: true,
           user: user,
-          message: 'You have logged in to secure content',
         },
       };
     }
@@ -32,9 +30,7 @@ export async function getServerSideProps(context){
 
     return {
       props: {
-        canRender: false,
         session:[],
-        message: 'please sign in to view secure content'
       },
     };
   }

@@ -1,4 +1,4 @@
-import { signIn, getSession, getProviders} from "next-auth/react"
+import { signIn, getSession, getProviders, signOut} from "next-auth/react"
 import {db} from "../utils/firebase";
 import Navbar from "../components/common/Navbar";
 import Header from "../components/common/Header";
@@ -42,6 +42,7 @@ export async function getServerSideProps(context){
     }
     else{
       console.log('this email does not belong to Shiv Nadar University')
+      
       return {
         props:{
           session: null,
@@ -50,6 +51,7 @@ export async function getServerSideProps(context){
       }
     }
   }
+
 
   return {
     props: {

@@ -26,7 +26,7 @@ export default function Home(props) {
         <div className={styles.left}>
           <div className={styles.companyCol}>
             {companies.map((company) => {
-              return <CompanyCard key={company} name={company} count="2" />;
+              return <CompanyCard companyName={company} count="2" />;
             })}
           </div>
         </div>

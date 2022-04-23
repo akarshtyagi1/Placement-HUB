@@ -7,6 +7,9 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    background-color:white;
+
 
     & h3{
         margin: 0;
@@ -18,10 +21,11 @@
 
     & >p{
         margin: 0;
-        font-size: 0.75em;
+        font-size: 1em;
         line-height: 18px;
         max-height: 72px;
         overflow: hidden;
+        text-align: justify;
     }
 
     & div{

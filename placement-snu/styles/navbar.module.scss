@@ -1,9 +1,7 @@
 $header-background : #175699;
-// $border: 1px solid black;
 
 .navbar{
     background-color: $header-background;
-    // border: 1px solid black;    
     padding: 10px 8vw;
     height: 5vh;
     width: 100vw;
@@ -15,7 +13,6 @@ $header-background : #175699;
 
     & div{
         width: 60vw;
-        // border: 1px solid black;
 
         & p{
             text-align: center;
