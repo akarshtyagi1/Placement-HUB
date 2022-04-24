@@ -1,0 +1,41 @@
+.experience{
+    height: 30%;
+    border: 1px solid black;
+    margin: 15px 0;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color:white;
+
+
+    & h3{
+        margin: 0;
+    }
+
+    & p{
+        margin: 0;
+    }
+
+    & >p{
+        margin: 0;
+        font-size: 1em;
+        line-height: 18px;
+        max-height: 72px;
+        overflow: hidden;
+        text-align: justify;
+    }
+
+    & div{
+        display: flex;
+        margin-top: 10px;
+        
+        & p:first-of-type{
+            margin: 0;
+            flex-grow: 3;
+            font-size: 1em;
+        }
+    }
+}

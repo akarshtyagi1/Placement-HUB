@@ -1,0 +1,37 @@
+.body{
+    margin-top: calc(5vh + 20px);
+    height: calc(95vh - 22px);
+    padding: 10px 0;
+    box-sizing: border-box;
+
+    & .Container{
+        height: 100%;
+        width: 80%;
+        margin: auto;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+
+        & h1{
+            border: 1px solid black;
+        }
+
+        & .quesWrapper{
+            flex-grow: 8;
+            box-sizing: border-box;
+            padding: 20px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: row;
+            overflow-y: scroll;
+            flex-wrap: wrap;
+            justify-content: center;
+            -ms-overflow-style: none; 
+            scrollbar-width: none; 
+
+            &::-webkit-scrollbar {
+                display: none;  
+            }
+        }
+    }
+}

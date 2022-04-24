@@ -1,13 +1,6 @@
 import styles from "../styles/home.module.scss";
-
-const CompanyCard = (props) => {
-  return (
-    <div className={styles.companyCard}>
-      <p className={styles.companyName}>{props.name}</p>
-      <p className={styles.qCount}>{props.count}</p>
-    </div>
-  );
-};
+import CompanyCard from "./CompanyCard";
+import ExperienceCard from "./ExperienceCard";
 
 const companies = [
   "Amazon",
@@ -33,12 +26,20 @@ export default function Home(props) {
         <div className={styles.left}>
           <div className={styles.companyCol}>
             {companies.map((company) => {
-              return <CompanyCard key={company} name={company} count="2" />;
+              return <CompanyCard companyName={company} count="2" />;
             })}
           </div>
         </div>
         <div className={styles.mid}>Mid</div>
-        <div className={styles.right}>right</div>
+        <div className={styles.right}>
+          <div className={styles.experienceCol}>
+            <ExperienceCard />
+            <ExperienceCard />
+            <ExperienceCard />
+            <ExperienceCard />
+            <ExperienceCard />
+          </div>
+        </div>
       </div>
     </>
   );
