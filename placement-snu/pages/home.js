@@ -15,7 +15,6 @@ export async function getServerSideProps(context){
     const {req, res} = context;
     const session = await getSession({req});
     
-
     if (session) { 
        const user = JSON.stringify(session.user)
       return {

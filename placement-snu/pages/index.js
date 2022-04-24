@@ -1,6 +1,5 @@
 import { signIn, getSession, getProviders, signOut} from "next-auth/react"
 import {db} from "../utils/firebase";
-import Navbar from "../components/common/Navbar";
 import Header from "../components/common/Header";
 import {addDoc, collection, getDocs, query, where} from "firebase/firestore";
 import Login from "../components/Login";
