@@ -3,10 +3,10 @@ import styles from "../styles/companyCard.module.scss";
 export default function CompanyCard(props) {
   return (
     <div
-      id={props.companyName}
+      id={props.id}
       className={styles.companyCard}
       onClick={(e) => {
-        console.log(e.currentTarget.id);
+        window.location.href = "/questions?id=" + e.currentTarget.id;
       }}
     >
       <p className={styles.companyName}>{props.companyName}</p>

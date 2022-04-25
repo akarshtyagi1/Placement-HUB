@@ -18,21 +18,31 @@ export default function Navbar() {
     }
   }
 
-  const user = getUser().then((res) => {
-    return res;
-  });
+  const user = getUser();
 
   return (
     <>
       <div className={styles.navbar}>
-        <Image src={Logo} width="175px" />
+        <Image
+          onClick={() => {
+            window.location.href = "/home";
+          }}
+          src={Logo}
+          width="175px"
+        />
         <div className={styles.title}>
           <p>PLACEMENTS-SNU</p>
         </div>
         {true && (
           <>
             <div className={styles.user}>
-              <button>Share</button>
+              <button
+                onClick={() => {
+                  window.location.href = "/share";
+                }}
+              >
+                Share
+              </button>
               <button
                 onClick={() => {
                   window.location.href = "/experiences";

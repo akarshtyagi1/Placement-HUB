@@ -1,0 +1,16 @@
+.body{
+    margin-top: calc(5vh + 20px);
+    height: calc(95vh - 22px);
+    padding: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+
+    & > .FormWrapper{
+        width: 60%;
+        height: 100%;
+        margin: auto;
+        border: 1px solid black;
+        padding: 50px;
+        box-sizing: border-box;
+    }
+}

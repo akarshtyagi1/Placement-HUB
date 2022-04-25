@@ -2,31 +2,21 @@ import styles from "../styles/home.module.scss";
 import CompanyCard from "./CompanyCard";
 import ExperienceCard from "./ExperienceCard";
 
-const companies = [
-  "Amazon",
-  "American Express",
-  "Google",
-  "Google",
-  "Google",
-  "Google",
-  "Google",
-  "Google",
-  "Google",
-  "Google",
-  "Google",
-  "Google",
-  "Google",
-  "Google",
-];
-
-export default function Home(props) {
+export default function Home({ companyNames }) {
   return (
     <>
       <div className={styles.body}>
         <div className={styles.left}>
           <div className={styles.companyCol}>
-            {companies.map((company) => {
-              return <CompanyCard companyName={company} count="2" />;
+            {companyNames.map((company) => {
+              return (
+                <CompanyCard
+                  key={company.id}
+                  id={company.id}
+                  companyName={company.name}
+                  count={company.count}
+                />
+              );
             })}
           </div>
         </div>
