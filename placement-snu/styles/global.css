@@ -3,5 +3,6 @@ body {
       'Arial', sans-serif;
       margin: 0;
       box-sizing: border-box;
+      color: #090056;
       background: linear-gradient(90deg,#dae3fe,#e9effd);
 }
