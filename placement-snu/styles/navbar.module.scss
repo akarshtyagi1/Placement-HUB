@@ -33,5 +33,29 @@ $header-background : #175699;
         width: 20%;
         display: flex;
         justify-content: space-evenly;
+
+        & > p{
+            color: white;
+            width: fit-content;
+            height: fit-content;
+            border: 1px solid black;
+            line-height: 20px;
+        }
+
+        & button{
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            background-color: #175699;;
+            border-radius: 30px;
+            border: 1px solid white;
+
+            &:hover, &:focus{
+                background-color: white;
+                border: #175699;
+                color: #175699;
+            }
+        }
+
     }
 }

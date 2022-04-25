@@ -50,7 +50,7 @@ export default function Navbar() {
               >
                 Experience
               </button>
-              <h3>Akarsh Tyagi</h3>
+              {/* <p>Akarsh Tyagi</p> */}
               <button onClick={() => signOut()}>Log Out</button>
             </div>
           </>

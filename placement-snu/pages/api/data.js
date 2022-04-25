@@ -1,5 +1,5 @@
 import {db} from '../../utils/firebase';
-import {collection, getDocs, addDoc} from 'firebase/firestore';
+import {collection, getDocs, addDoc, query, orderBy} from 'firebase/firestore';
 import { async } from '@firebase/util';
 
 export async function getCompanyNames(){
@@ -32,6 +32,20 @@ export async function getCompanyQuestions(id){
         }
     })
     return companyQues;
+}
+
+export async function getExperiences(){
+    const expRef = collection(db,"Experience");
+    const q = query(expRef, orderBy('year','desc'))
+    const data = await getDocs(q);
+    const exp = []
+    data.docs.map((doc)=>{
+        const d = doc.data();
+        d['id'] = doc.id;
+        exp.push(d);
+    })
+
+    return exp;
 }
 
 export default async function handler(req, res){

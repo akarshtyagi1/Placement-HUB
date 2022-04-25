@@ -2,7 +2,7 @@ import styles from "../styles/home.module.scss";
 import CompanyCard from "./CompanyCard";
 import ExperienceCard from "./ExperienceCard";
 
-export default function Home({ companyNames }) {
+export default function Home({ companyNames, experiences }) {
   return (
     <>
       <div className={styles.body}>
@@ -20,14 +20,26 @@ export default function Home({ companyNames }) {
             })}
           </div>
         </div>
-        <div className={styles.mid}>Mid</div>
+        <div className={styles.mid}>
+          <div className={styles.carouselWrapper}>
+            <h1>Carousel</h1>
+          </div>
+          <div className={styles.announcementWrapper}>
+            <h1>Announcements</h1>
+          </div>
+        </div>
         <div className={styles.right}>
           <div className={styles.experienceCol}>
-            <ExperienceCard />
-            <ExperienceCard />
-            <ExperienceCard />
-            <ExperienceCard />
-            <ExperienceCard />
+            {experiences.map((exp) => {
+              return (
+                <ExperienceCard
+                  title={exp.title}
+                  content={exp.content}
+                  name={exp.name}
+                  year={exp.year}
+                />
+              );
+            })}
           </div>
         </div>
       </div>

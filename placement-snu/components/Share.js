@@ -17,14 +17,6 @@ export default function Share({ user }) {
     e.preventDefault();
     const expCollectionRef = collection(db, "Experience");
     try {
-      //   await addDoc(expCollectionRef, {
-      //     name: formData.name,
-      //     title: formData.title,
-      //     comapny: formData.company,
-      //     year: formData.year,
-      //     content: formData.content,
-      //   });
-
       const res = await fetch("/api/data", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
